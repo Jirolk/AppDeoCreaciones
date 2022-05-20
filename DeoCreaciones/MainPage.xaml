@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeoCreaciones.MainPage">
+
+
+    <RefreshView RefreshColor="red" 
+                 x:Name="Refescar"
+                 Refreshing="Refescar_Refreshing">
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#FF1A03" Padding="24" CornerRadius="0">
+                    <Label Text="DEOCREACIONES" 
+                           HorizontalTextAlignment="Center" 
+                           TextColor="White" 
+                           FontSize="36"
+                           FontAttributes="Bold"/>
+                </Frame>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Calculador de Copias" FontSize="Title" Padding="30,10,30,10"/>
+                    <Label Grid.Column="1" Text="Precio:"
+                   Padding="0,-5,10,10"/>
+                    <Entry Grid.Column="1" 
+                   HorizontalOptions="Start"
+                   Keyboard="Numeric"
+                   x:Name="txtprecio"
+                           TextChanged="txtprecio_TextChanged"
+                           ></Entry>
+                </Grid>
+                <Grid  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" 
+                   Text="Total: "
+                   HorizontalTextAlignment="End" 
+                   FontAttributes="Bold"
+                           FontSize="20"/>
+                    <Label Grid.Column="1" 
+                   Grid.Row="0" Text="0"
+                   FontSize="50"
+                           FontAttributes="Bold"
+                   x:Name="lblTotal"/>
+                    <Label Grid.Column="0" Grid.Row="1" 
+                   Text="Cant. Copias: "
+                   Padding="20,0"
+                   FontAttributes="Bold"
+                           FontSize="15"/>
+                    <Label Grid.Column="1" 
+                   Grid.Row="1" Text="0"
+                   FontSize="25"
+                   x:Name="lblCantCopias"
+                           />
+                    <BoxView Grid.Row="3" Grid.ColumnSpan="2" 
+                     BackgroundColor="Black"
+                     HeightRequest="1"/>
+                </Grid>
+
+                <Grid Padding="10,10,10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0"
+                   Text="Copias"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                           />
+                    <Label Grid.Column="1" Grid.Row="0"
+                   Text="Cant. de hojas"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+                    <Label Grid.Column="2" Grid.Row="0"
+                   Text="Total"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+
+                    <Entry Grid.Column="0" Grid.Row="1"
+                            FontAttributes="Bold"
+                          HorizontalTextAlignment="Center"
+                            x:Name="txtCopia1"
+                            TextChanged="txtCopia1_TextChanged"
+                            Keyboard="Numeric" Completed="txtCopia1_Completed"
+                   />
+                    <Entry Grid.Column="1" Grid.Row="1"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Keyboard="Numeric"
+                            x:Name="txtCantCopia1"
+                            TextChanged="txtCantCopia1_TextChanged"
+                           Completed="txtCantCopia1_Completed"/>
+                    <Entry Grid.Column="2" Grid.Row="1"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            IsReadOnly="True"
+                            x:Name="txtTotal1" 
+                   />
+
+
+
+                    <Entry Grid.Column="0" Grid.Row="2"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            x:Name="txtCopia2"
+                            TextChanged="txtCopia2_TextChanged"
+                            Keyboard="Numeric" 
+                           Completed="txtCopia2_Completed"
+                   />
+                    <Entry Grid.Column="1" Grid.Row="2"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Keyboard="Numeric"
+                            x:Name="txtCantCopia2"
+                            TextChanged="txtCantCopia2_TextChanged"
+                            Completed="txtCantCopia2_Completed"/>
+                    <Entry Grid.Column="2" Grid.Row="2"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            IsReadOnly="True"
+                            x:Name="txtTotal2" 
+                   />
+
+
+
+
+                    <Entry Grid.Column="0" Grid.Row="3"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            x:Name="txtCopia3"
+                            TextChanged="txtCopia3_TextChanged"
+                            Keyboard="Numeric" 
+                           Completed="txtCopia3_Completed"
+                   />
+                    <Entry Grid.Column="1" Grid.Row="3"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Keyboard="Numeric"
+                            x:Name="txtCantCopia3"
+                            TextChanged="txtCantCopia3_TextChanged"
+                           Completed="txtCantCopia3_Completed"/>
+                    <Entry Grid.Column="2" Grid.Row="3"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            IsReadOnly="True"
+                            x:Name="txtTotal3" 
+                   />
+                </Grid>
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+
+</ContentPage>
